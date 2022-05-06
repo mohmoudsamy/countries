@@ -1,0 +1,23 @@
+.header {
+  background-color: var(--background-element);
+  box-shadow: 0px 0px 20px var(--shadow);
+  padding: 16px;
+  .header__text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .header__icon {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .header {
+    .header__text {
+      font-size: 1rem;
+    }
+    .header__icon {
+      font-size: 0.75rem;
+    }
+  }
+}

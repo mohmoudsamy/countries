@@ -1,0 +1,101 @@
+/* Colors */
+$darkBackground: #202c37; //(Dark Mode Background)
+$darkElement: #2b3945; //(Dark Mode Elements)
+$white: #ffffff; // (Dark Mode Text & Light Mode Elements)
+$lightBackground: #fafafa; // (Light Mode Background)
+$lightText: #111517; //(Light Mode Text)
+$lightInput: #858585; //(Light Mode Input)
+$lightShadow: #ebebeb;
+
+/* Typograpgy */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+
+$fontFamily: "Nunito Sans", sans-serif;
+$headingSize: 16px;
+$textSize: 14px;
+
+/* Screen Sizes */
+
+$mobile: 375px;
+$desktop: 90vw;
+
+/* Import Components */
+
+@import "./header/Header";
+@import "./search/SearchBar";
+@import "./country/Country";
+@import "./pages/CountryDetails";
+@import "./dropdown/Dropdown";
+@import "./loading/Loading";
+/* Reset Elements */
+
+:root {
+  --background-color: #{$lightBackground};
+  --background-element: #{$white};
+  --color: #{$lightText};
+  --shadow: #{$lightShadow};
+  --input-icon: #{$lightInput};
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  font-family: $fontFamily;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+/*
+*** Body Colors
+*/
+.dark__mode {
+  --background-color: #{$darkBackground};
+  --background-element: #{$darkElement};
+  --color: #{$white};
+  --input-icon: #{$white};
+  --shadow: #{$darkBackground};
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: $desktop;
+  margin: auto;
+  padding: 0 0.75rem;
+}
+
+.flex__between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}

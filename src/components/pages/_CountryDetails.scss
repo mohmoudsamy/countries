@@ -1,0 +1,60 @@
+.country__details {
+  padding: 4rem 0;
+  .back__btn {
+    a {
+      color: inherit;
+      button {
+        background-color: var(--background-element);
+        color: inherit;
+        padding: 0.55rem 2.5rem;
+        box-shadow: 0px 0px 5px 0px #858585;
+        border-radius: 5px;
+        cursor: pointer;
+        svg {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  .country__content {
+    padding-top: 5rem;
+    .country__content_flag {
+      width: 40%;
+      margin-right: 10%;
+      img {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+    .country__content_info {
+      width: 50%;
+      .country__content_info-name {
+        margin-bottom: 1rem;
+      }
+
+      > div:first-of-type {
+        align-items: flex-start;
+        p {
+          margin: 0.5rem 0;
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+      .country__content_info-borders {
+        margin-top: 3rem;
+        span {
+          display: inline-block;
+          margin: 0 0.5rem;
+          width: 5rem;
+          text-align: center;
+          background-color: $white;
+          padding: 0.55rem 0.5rem;
+          box-shadow: 0px 0px 1px $lightInput;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
