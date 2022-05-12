@@ -58,3 +58,15 @@
     }
   }
 }
+@media (max-width: 576px) {
+  .country__content {
+    flex-direction: column;
+    .country__content_flag {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .country__content_info {
+      width: 100% !important;
+    }
+  }
+}

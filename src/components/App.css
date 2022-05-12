@@ -273,6 +273,22 @@
   cursor: pointer;
 }
 
+@media (max-width: 576px) {
+  .country__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .country__content .country__content_flag {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .country__content .country__content_info {
+    width: 100% !important;
+  }
+}
+
 .dropdown {
   list-style: none;
   position: relative;
