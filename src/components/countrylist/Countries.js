@@ -11,8 +11,8 @@ class Countries extends React.Component {
   }
 
   renderCountriesList() {
-    const start = 14;
-    const end = 22;
+    const start = 16;
+    const end = 24;
     return this.props.countriesList.slice(start, end).map((country) => {
       return (
         <React.Fragment key={Math.random() * 3}>

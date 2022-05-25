@@ -27,9 +27,19 @@ const countryDetails = (state = [], action) => {
   }
 };
 
+const region = (state = "", action) => {
+  switch (action.type) {
+    case "REGION":
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
 const reducers = combineReducers({
   countries,
   country,
   countryDetails,
+  region,
 });
 export default reducers;

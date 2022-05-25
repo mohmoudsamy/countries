@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { getCountryDetails } from "../../actions";
-import { clickedCountryName } from "../country/Country";
+import { clickedCountryName } from "../countrylist/Country";
 import Header from "../header/Header";
 import Loading from "../loading/Loading";
 
@@ -14,11 +14,6 @@ const backBtn = <FontAwesomeIcon icon={faArrowLeftLong} />;
 class CountryDetails extends React.Component {
   componentDidMount() {
     this.props.getCountryDetails(clickedCountryName);
-    this.loadCountryName();
-  }
-
-  componentDidUpdate() {
-    this.loadCountryName();
   }
 
   storeCountryName(theName) {
@@ -88,23 +83,11 @@ class CountryDetails extends React.Component {
       );
     });
   }
-  loadCountryName = () => {
-    window.onload = () => {
-      if (localStorage.getItem("modeColor")) {
-        document.body.classList.add("dark__mode");
-      }
-      if (localStorage.getItem("countryName")) {
-        this.props.getCountryDetails(localStorage.getItem("countryName"));
-      } else {
-        this.props.getCountryDetails(clickedCountryName);
-      }
-    };
-  };
+
   render() {
     return (
       <>
         <Header />
-
         {this.props.countryDetails.length === 0 ||
         (this.props.countryDetails.length >= 1 &&
           this.props.countryDetails[0].name.common !== clickedCountryName) ? (

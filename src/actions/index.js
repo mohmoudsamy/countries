@@ -2,6 +2,7 @@ import axios from "axios";
 const GET_ALL = "GET_ALL";
 const GET_COUNTRY = "GET_COUNTRY";
 const GET_COUNTRY_DETAILS = "GET_COUNTRY_DETAILS";
+const REGION = "REGION";
 
 export const getAllCountries = () => async (dispatch) => {
   const response = await axios.get("https://restcountries.com/v3.1/all");
@@ -20,4 +21,11 @@ export const getCountryDetails = (countryNameDetails) => async (dispatch) => {
     `https://restcountries.com/v3.1/name/${countryNameDetails}`
   );
   dispatch({ type: GET_COUNTRY_DETAILS, payload: response.data });
+};
+
+export const selectRegion = (theRegion) => {
+  return {
+    type: REGION,
+    payload: theRegion,
+  };
 };
